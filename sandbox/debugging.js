@@ -1,12 +1,13 @@
 const PI = 3.14;
-let radius = 3;
 let area = 0;
 
-function circleArea(radius) {
-    radius * radius * PI
+function circleArea(radius) 
+{
+    area = radius * radius * PI;
+    return area;
 }
-area = radius * radius * PI;
-console.log("area1:", area)
-radius = 4;
-area = radius * radius * PI;
-console.log("area2:", area)
+
+area = circleArea(3);
+console.log("area1:", area);
+area = circleArea(4);
+console.log("area2:", area);
