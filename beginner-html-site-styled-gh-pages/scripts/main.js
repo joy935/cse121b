@@ -18,3 +18,10 @@ function setUserName() {
     myHeading.textContent = `Mozilla is cool, ${myName}`;
   }
   
+  if (!localStorage.getItem("name")) {
+    setUserName();
+  } else {
+    const storedName = localStorage.getItem("name");
+    myHeading.textContent = `Mozilla is cool, ${storedName}`;
+  }
+  
