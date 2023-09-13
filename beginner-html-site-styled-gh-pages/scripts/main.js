@@ -25,3 +25,7 @@ function setUserName() {
     myHeading.textContent = `Mozilla is cool, ${storedName}`;
   }
   
+  myButton.onclick = () => {
+    setUserName();
+  };
+  
