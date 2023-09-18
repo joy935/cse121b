@@ -4,7 +4,11 @@ const y = 2
 // Add two numbers
 let a = x + y
 console.log(a)
+
 // Multiply two numbers
+a = x * y
+console.log(a)
+
 // Subtract one from a number
 // concatinate two strings together.
 // assign a value to a variable
