@@ -38,5 +38,12 @@ else {
 }
 
 // check to see if one number is less than another number
+if (x < y) {
+    console.log("x is less than y")
+}
+else if (x > y) {
+    console.log("x is larger than y")
+}
+
 // Check to see if two values are NOT equal
 // check to see if a value is less than 10 and greater than 0
