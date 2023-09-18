@@ -46,4 +46,11 @@ else if (x > y) {
 }
 
 // Check to see if two values are NOT equal
+if (x != y) {
+    console.log("x is not equal to y")
+}
+else {
+    console.log("x and y are equal")
+}
+
 // check to see if a value is less than 10 and greater than 0
