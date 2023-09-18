@@ -30,6 +30,13 @@ for (let i = 0; i < 5; i++) {
 }
 
 // compare two values to see if they are the same
+if (x == y) {
+    console.log("x and y are the same")
+}
+else {
+    console.log("x and y are not same")
+}
+
 // check to see if one number is less than another number
 // Check to see if two values are NOT equal
 // check to see if a value is less than 10 and greater than 0
