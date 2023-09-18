@@ -1,5 +1,5 @@
-x = 1
-y = 2
+const x = 1
+const y = 2
 
 // Add two numbers
 let a = x + y
