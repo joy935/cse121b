@@ -54,3 +54,9 @@ else {
 }
 
 // check to see if a value is less than 10 and greater than 0
+if (x < 10 && x > 0) {
+    console.log("0 < x < 10")
+}
+else {
+    console.log("x is not less than 10 and greater than 0")
+}
