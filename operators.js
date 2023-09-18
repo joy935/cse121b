@@ -10,6 +10,8 @@ a = x * y
 console.log(a)
 
 // Subtract one from a number
+a = x - y
+console.log(a)
 // concatinate two strings together.
 // assign a value to a variable
 // increment the value in a variable by 3
