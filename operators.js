@@ -19,6 +19,8 @@ const c = "morning"
 console.log(b+c)
 
 // assign a value to a variable
+a = 10
+console.log(a)
 // increment the value in a variable by 3
 // compare two values to see if they are the same
 // check to see if one number is less than another number
