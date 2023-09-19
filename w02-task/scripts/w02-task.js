@@ -5,13 +5,14 @@
 /* Step 2 - Variables */
 const fullName = "Veihi Tupai";
 const currentYear = 2023;
-const profilePicture = "w02-task/images/photo_veihi.pdf"
+const profilePicture = "w02-task/images/photo_veihi.pdf";
 
 
 /* Step 3 - Element Variables */
-
-
-
+const nameElement = document.getElementById("#name");
+const foodElement = document.getElementById("#food");
+const yearElement = document.getElementById("#year");
+const imageElement = document.querySelector("images/placeholder.png").scr;
 
 
 /* Step 4 - Adding Content */
