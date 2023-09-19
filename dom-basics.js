@@ -10,3 +10,14 @@ document.body.appendChild(newImage);
 const newDiv = document.createElement("div");
 newDiv.innerHTML = "<ul><li>One</li><li>Two</li><li>Three</li></ul>";
 document.body.appendChild(newDiv);
+
+const newSection = document.createElement("section");
+const newTitle = document.createElement("h2");
+newTitle.innerText = "CSE 121b";
+document.body.appendChild(newTitle);
+
+const anotherParagraph = document.createElement("p")
+anotherParagraph.innerText = "Welcome to Javascript Language";
+document.body.appendChild(anotherParagraph);
+
+document.body.appendChild(newSection);
