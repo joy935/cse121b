@@ -1,5 +1,5 @@
 /* W02-Task - Profile Home Page */
-
+cont fullName = 
 /* Step 1 - Setup type tasks - no code required */
 
 /* Step 2 - Variables */
