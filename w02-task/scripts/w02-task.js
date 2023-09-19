@@ -12,7 +12,7 @@ const profilePicture = "images/photo_veihi.png";
 const nameElement = document.getElementById("name");
 const foodElement = document.getElementById("food");
 const yearElement = document.querySelector("#year");
-var imageElement = document.querySelector("img");
+const imageElement = document.querySelector("img");
 
 
 /* Step 4 - Adding Content */
