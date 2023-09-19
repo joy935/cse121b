@@ -1,10 +1,11 @@
 /* W02-Task - Profile Home Page */
-cont fullName = 
+
 /* Step 1 - Setup type tasks - no code required */
 
 /* Step 2 - Variables */
-
-
+const fullName = "Veihi Tupai";
+const currentYear = 2023;
+const profilePicture = "w02-task/images/photo_veihi.pdf"
 
 
 /* Step 3 - Element Variables */
