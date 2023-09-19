@@ -4,8 +4,8 @@
 
 /* Step 2 - Variables */
 const fullName = "Veihi Tupai";
-const currentYear = "2023";
-var profilePicture = "images/photo_veihi.png";
+const currentYear = 2023;
+const profilePicture = "images/photo_veihi.png";
 
 
 /* Step 3 - Element Variables */
