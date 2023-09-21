@@ -35,9 +35,3 @@ foodElement.innerHTML += `<br>${favoriteFood.join(', ')}`;
 
 favoriteFood.pop();
 foodElement.innerHTML += `<br>${favoriteFood.join(', ')}`;
-
-
-/* Adjust the image */
-imageElement.style.maxWidth = '200px';
-imageElement.style.borderRadius = '10px';
-imageElement.style.boxShadow = '4px 4px 8px rgba(0, 0, 0, 0.8)'; 
