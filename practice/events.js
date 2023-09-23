@@ -13,10 +13,12 @@ function newTask() {
   // add it to our arrays tasks
   const task = newTodoInput.value;
   tasks.push({detail: task, completed: false});
-  newTodoInput.value = " ";
+  //document.getElementById("#submitTask").addEventListener("click", newTask);
+  buttonElement.addEventListener("click", newTask);
   // render out the list.
   renderTasks(tasks);
-  document.getElementById("#submitTask").addEventListener("click", newTask);
+  newTodoInput.value = " ";
+
 }
 
 function removeTask(taskElement) {
