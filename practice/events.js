@@ -9,8 +9,14 @@ function renderTasks(tasks) {
 
 function newTask() {
   // get the value entered into the #todo input
+  const newTodoInput = document.getElementById("#todo");
   // add it to our arrays tasks
+  const task = newTodoInput.value;
+  tasks.push({detail: task, completed: false});
+  newTodoInput.value = " ";
   // render out the list.
+  renderTasks(tasks);
+  document.getElementById("#submitTask").addEventListener("click", newTask);
 }
 
 function removeTask(taskElement) {
