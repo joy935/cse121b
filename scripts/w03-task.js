@@ -2,8 +2,15 @@
 
 /* FUNCTIONS */
 /* Function Definition - Add Numbers */
-
-
+function add(number1, number2) {
+    return number1 + number2;
+}
+function addNumbers(add1, add2) {
+    let add1 = document.querySelector("#add1").value;
+    let add2 = document.querySelector("#add2").value;
+    document.querySelector("#sum").value = add(add1, add2);
+}
+document.querySelector("#addNumbers").addEventListener("click", addNumbers);
 /* Function Expression - Subtract Numbers */
 
 
