@@ -61,8 +61,9 @@ document.querySelector("#odds").innerHTML = numbersArray.filter((number) => numb
 document.querySelector("#evens").innerHTML = numbersArray.filter((number) => number % 2 === 0);
 
 /* Output Sum of Org. Array */
-document.querySelector("#sumOfArray").innerHTML = numbersArray.reduce((numberArray1, numberArray2) => numberArray1 + numberArray2, 0);
+document.querySelector("#sumOfArray").innerHTML = numbersArray.reduce((sum, number) => sum + number);
 
 /* Output Multiplied by 2 Array */
+document.querySelector("#multiplied").innerHTML = numbersArray.map((number) => number * 2);
 
 /* Output Sum of Multiplied by 2 Array */
