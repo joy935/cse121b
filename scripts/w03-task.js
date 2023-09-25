@@ -44,8 +44,10 @@ let divideNumbers = () => {
 }
 document.querySelector("#divideNumbers").addEventListener("click", divideNumbers);
 
-// Using any combination of function declaration types, repeat the items in Step 2 with new functions named divide and divideNumbers and HTML form controls with IDs of dividend, divisor, divideNumbers, and quotient. 
 /* Decision Structure */
+const currentDate = new Date();
+const currentYear = currentDate.getFullYear();
+document.querySelector("#year").value = currentYear;
 
 /* ARRAY METHODS - Functional Programming */
 /* Output Source Array */

@@ -17,36 +17,35 @@ document.querySelector("#addNumbers").addEventListener("click", addNumbers);
 let subtract = function (number1, number2) {
     return number1 - number2;
 }
-function subtractNumbers (subtract1, subtract2) {
-    let subtract1 = document.querySelector("#subtract1").value;
-    let subtract2 = document.querySelector("#subtract2").value;
+let subtractNumbers = function (number1, number2) {
+    let subtract1 = parseInt(document.querySelector("#subtract1").value);
+    let subtract2 = parseInt(document.querySelector("#subtract2").value);
     document.querySelector("#difference").value = subtract(subtract1, subtract2);
 }
 document.querySelector("#subtractNumbers").addEventListener("click", subtractNumbers);
 
 /* Arrow Function - Multiply Numbers */ 
-//  const countriesLong = countries.filter( country => country.length >= 7); 
 let multiply = ((number1, number2) => number1 * number2);
-function divideNumbers (factor1, factor2) {
-    let factor1 = document.querySelector("#factor1").value;
-    let factor2 = document.querySelector("#factor2").value;
-    document.querySelector("#product").value = divideNumbers(factor1, factor2);
-}
-document.querySelector("#multiplyNumbers").addEventListener("click", divideNumbers);
+let multiplyNumbers = () => {
+    let factor1 = parseInt(document.querySelector("#factor1").value);
+    let factor2 = parseInt(document.querySelector("#factor2").value);
+    document.querySelector("#product").value = multiply(factor1, factor2);
+};
+document.querySelector("#multiplyNumbers").addEventListener("click", multiplyNumbers);
 
 /* Open Function Use - Divide Numbers */
-function divide(number1, number2) {
-    return number1 / number2 ;
+let divide = function (number1, number2) {
+    return number1 / number2;
 }
-function divideNumbers(divident, divisor) {
-    let divident = document.querySelector("#divident").value;
-    let divisor = document.querySelector("#divisor").value;
-    document.querySelector("#quotient").value = divide(divident, divisor);
+let divideNumbers = () => {
+    let dividend = parseInt(document.querySelector("#dividend").value);
+    let divisor = parseInt(document.querySelector("#divisor").value);
+    document.querySelector("#quotient").value = divide(dividend, divisor);
 }
 document.querySelector("#divideNumbers").addEventListener("click", divideNumbers);
 
+// Using any combination of function declaration types, repeat the items in Step 2 with new functions named divide and divideNumbers and HTML form controls with IDs of dividend, divisor, divideNumbers, and quotient. 
 /* Decision Structure */
-
 
 /* ARRAY METHODS - Functional Programming */
 /* Output Source Array */
