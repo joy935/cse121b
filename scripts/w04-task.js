@@ -15,7 +15,7 @@ let myProfile = {
     hobbies: [
         "Reading",
         "Cooking",
-        "Travelling"],
+        "Traveling"],
     placesLived: [],
 };
 
@@ -46,10 +46,20 @@ imageElement.setAttribute("src", myProfile.photo.imagePath);
 imageElement.setAttribute("alt", myProfile.photo.imageName);
 
 /* Favorite Foods List*/
-
+const foodList = document.getElementById("favorite-foods");
+myProfile.favoriteFoods.forEach(food => {
+    let list = document.createElement("li");
+    list.innerHTML = food;
+    foodList.appendChild(list);
+});
 
 /* Hobbies List */
-
+const hobbieList = document.getElementById("hobbies");
+myProfile.hobbies.forEach (hobby => {
+    let list = document.createElement("li");
+    list.innerHTML = hobby;
+    hobbieList.appendChild(list);
+})
 
 /* Places Lived DataList */
 
