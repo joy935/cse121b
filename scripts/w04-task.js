@@ -36,11 +36,14 @@ myProfile.placesLived.push(
 );
 
 /* DOM Manipulation - Output */
-document.getElementById("name").textContent = myProfile.name;
+
 /* Name */
+document.getElementById("name").textContent = myProfile.name;
 
 /* Photo with attributes */
-
+const imageElement = document.querySelector("#photo");
+imageElement.setAttribute("src", myProfile.photo.imagePath);
+imageElement.setAttribute("alt", myProfile.photo.imageName);
 
 /* Favorite Foods List*/
 
