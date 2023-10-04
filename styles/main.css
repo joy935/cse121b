@@ -131,16 +131,7 @@ footer {
 }
 
 /* ID Selectors */
-#places-lived dt {
-    font-weight: bold;
-    color: black;
-    font-size: 15px;
-}
 
-#places-lived dd {
-    margin-left: 20px;
-    font-size: 13px;
-}
 /* Media Queries */
 @media only screen and (min-width: 32.5em) {
     nav ul {
