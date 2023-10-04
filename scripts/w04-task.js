@@ -67,7 +67,7 @@ myProfile.hobbies.forEach (hobby => {
     let list = document.createElement("li");
     list.innerHTML = hobby;
     hobbieList.appendChild(list);
-})
+});
 
 /* Places Lived DataList */
 const placeLived = document.querySelector("#places-lived");
@@ -80,4 +80,4 @@ myProfile.placesLived.forEach ((item) => {
 
     placeLived.appendChild(list1);
     placeLived.appendChild(list2);
-})
+});
