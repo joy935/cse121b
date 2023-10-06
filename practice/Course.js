@@ -31,6 +31,10 @@ const aCourse = {
         renderSections(this.sections);
       }
     },
+    init() {
+        setCourseInfo(this);
+        renderSections(this.sections);
+    }
   };
   
   function setCourseInfo(course) {
@@ -51,3 +55,5 @@ const aCourse = {
     );
     document.querySelector("#sections").innerHTML = html.join("");
   }
+
+export default aCourse;
