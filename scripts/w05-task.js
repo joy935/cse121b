@@ -31,7 +31,7 @@ const reset = () => {
         templesElement.innerHTML = ""};
 
 /* sortBy Function */
-const sortBy = (temple) => {
+const sortBy = (temples) => {
     reset();
     let filter = document.getElementById("sortBy").value;
     switch (filter) {
