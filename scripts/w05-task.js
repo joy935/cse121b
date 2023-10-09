@@ -9,7 +9,7 @@ const displayTemples = (temples) => {
     temples.forEach((temple) => {
        let oneTemple = document.createElement("ARTICLE");
        let templeName = document.createElement("h3");
-       templeName.textContent = temple.location;
+       templeName.textContent = temple.templeName;
        oneTemple.appendChild(templeName);
        let templeImage = document.createElement("IMG"); 
        templeImage.setAttribute("src", temple.imageUrl);
