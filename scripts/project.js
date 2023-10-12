@@ -1,25 +1,25 @@
 /* W07: Project */
 
 /* Declare and initialize global variables */
-const meteoElement = document.querySelector("#meteo");
-let meteoList = [];
+const emojiElement = document.querySelector("#meteo");
+let emojiList = [];
 
 /* async displayFruits Function */
-const displayMeteo = (meteos) => {
-    meteos.forEach((meteo) => {
+const displayEmoji = (emojis) => {
+    emojis.forEach((emoji) => {
         let article = document.createElement("article");
-        let weather = document.createElement("h3");
-        weather.textContent = weather.name;
+        let emoji = document.createElement("h3");
+        emoji.textContent = emoji.name;
 
-        article.appendChild(weather);
+        article.appendChild(emoji);
         meteoElement.appendChild(article);
     })};
 /* async getFruits Funtion using fetch() */
-const getMeteo = async () => {
-    const response = await fetch("https://api.weather.gov/");
+const getEmoji = async () => {
+    const response = await fetch("https://emojihub.yurace.pro/api/all");
     meteoList = await response.json();
-    //displayMeteo(meteoList);
-    console.log(meteoList);
+    //displayMeteo(emojiList);
+    console.log(emojiList);
 };
 
 /* */
