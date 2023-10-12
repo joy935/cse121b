@@ -23,4 +23,4 @@ const getEmoji = async () => {
 };
 
 /* */
-getMeteo();
+getEmoji();
