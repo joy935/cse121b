@@ -38,7 +38,8 @@ const getFruits = async () => {
 
 /* */
 
-document.querySelector("#search").addEventListener("click", function () {
-   // let fruit_name = document.querySelector("#fruitName").value;
-    getFruits()});
+// document.querySelector("#search").addEventListener("click", function () {
+//    // let fruit_name = document.querySelector("#fruitName").value;
+//     getFruits()});
+getFruits();
 console.log(fruitList);
