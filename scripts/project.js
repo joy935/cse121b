@@ -8,10 +8,10 @@ let meteoList = [];
 const displayMeteo = (meteo) => {
     meteo.forEach((meteo) => {
         let article = document.createElement("article");
-        let fruitName = document.createElement("h3");
-        fruitName.textContent = fruit.name;
+        let weather = document.createElement("h3");
+        weather.textContent = weather.name;
 
-        article.appendChild(fruitName);
+        article.appendChild(weather);
         meteoElement.appendChild(article);
     })};
 /* async getFruits Funtion using fetch() */
