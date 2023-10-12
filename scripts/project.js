@@ -18,7 +18,7 @@ const displayMeteo = (meteos) => {
 const getMeteo = async () => {
     const response = await fetch("https://api.weather.gov/");
     meteoList = await response.json();
-    displayMeteo(meteoList);
+    //displayMeteo(meteoList);
     console.log(meteoList);
 };
 
