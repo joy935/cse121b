@@ -8,11 +8,11 @@ let emojiList = [];
 const displayEmoji = (emojis) => {
     emojis.forEach((emoji) => {
         let article = document.createElement("article");
-        let emoji = document.createElement("h3");
-        emoji.textContent = emoji.name;
+        let emojiName = document.createElement("h3");
+        emojiName.textContent = emoji.name;
 
-        article.appendChild(emoji);
-        meteoElement.appendChild(article);
+        article.appendChild(emojiName);
+        emojiElement.appendChild(article);
     })};
 /* async getFruits Funtion using fetch() */
 const getEmoji = async () => {
