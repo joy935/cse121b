@@ -34,6 +34,7 @@ const getFruits = async () => {
     const response = await fetch("https://www.fruityvice.com/api/fruit/all");
     fruitList = await response.json();
     displayFruits(fruitList);
+    console.log(fruitList);
 };
 
 /* */
@@ -42,4 +43,3 @@ const getFruits = async () => {
 //    // let fruit_name = document.querySelector("#fruitName").value;
 //     getFruits()});
 getFruits();
-console.log(fruitList);
