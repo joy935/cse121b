@@ -5,8 +5,8 @@ const meteoElement = document.querySelector("#meteo");
 let meteoList = [];
 
 /* async displayFruits Function */
-const displayMeteo = (meteo) => {
-    meteo.forEach((meteo) => {
+const displayMeteo = (meteos) => {
+    meteos.forEach((meteo) => {
         let article = document.createElement("article");
         let weather = document.createElement("h3");
         weather.textContent = weather.name;
