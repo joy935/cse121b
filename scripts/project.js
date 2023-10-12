@@ -3,7 +3,6 @@
 /* Declare and initialize global variables */
 const fruitElement = document.querySelector("#fruits");
 let fruitList = [];
-let fruit_name = "";
 
 /* async displayFruits Function */
 const displayFruits = (fruits) => {
@@ -31,8 +30,8 @@ const displayFruits = (fruits) => {
         fruitElement.appendChild(article);
     })};
 /* async getFruits Funtion using fetch() */
-const getFruits = async (fruit_name) => {
-    const response = await fetch(`https://www.fruityvice.com/api/fruit/${fruit_name}`);
+const getFruits = async () => {
+    const response = await fetch(`https://www.fruityvice.com/api/fruit/all`);
     fruitList = await response.json();
     displayFruits(fruitList);
 };
@@ -40,6 +39,6 @@ const getFruits = async (fruit_name) => {
 /* */
 
 document.querySelector("#search").addEventListener("click", function () {
-    const fruitName = document.querySelector("#fruitName").value;
-    getFruits(fruitName)});
+   // let fruit_name = document.querySelector("#fruitName").value;
+    getFruits()});
 console.log(fruitList);
