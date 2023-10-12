@@ -23,4 +23,4 @@ const getMeteo = async () => {
 };
 
 /* */
-getFruits();
+getMeteo();
