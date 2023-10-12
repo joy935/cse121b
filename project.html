@@ -25,8 +25,14 @@
     </ul>
   </nav>
 
-  <main id="fruits">
-    <h1 id="title">Fruits Fact Generator</h1>
+  <main id="grid">
+    <h1>Fruit Fact Generator</h1>
+    <h2>Description on how to use it.</h2>
+    
+    <input id="fruitName"/>
+    <button id="search">Search</button>
+    <div id="fruits"></div>
+
   </main>
 
   <footer>
@@ -36,7 +42,7 @@
   <script>
     document.getElementById("year").innerHTML = new Date().getFullYear();
   </script>
-  <script src="scripts/project.js"></script>
+  <script defer src="scripts/project.js" type="module"></script>
 </body>
 
 </html>
