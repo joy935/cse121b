@@ -17,7 +17,7 @@ const displayEmoji = (emojis) => {
 /* async getFruits Funtion using fetch() */
 const getEmoji = async () => {
     const response = await fetch("https://emojihub.yurace.pro/api/all");
-    meteoList = await response.json();
+    emojiList = await response.json();
     //displayMeteo(emojiList);
     console.log(emojiList);
 };
