@@ -31,7 +31,7 @@ const displayFruits = (fruits) => {
     })};
 /* async getFruits Funtion using fetch() */
 const getFruits = async () => {
-    const response = await fetch(`https://www.fruityvice.com/api/fruit/all`);
+    const response = await fetch("https://www.fruityvice.com/api/fruit/all");
     fruitList = await response.json();
     displayFruits(fruitList);
 };
