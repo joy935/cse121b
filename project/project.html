@@ -17,12 +17,14 @@
     <h1>Emoji Selector</h1>
     <h3>Presentation...</h3>
 
-    <input data-emoji="true" type="text" class="form-control">
-    <div id="emojiSearch">
+    <input type="text" id="search" placeholder="Search for an emoji...">
+    <button id="searchButton">Search</button>
+    <div id="emojiData">
       <ul id="emojiList"></ul>
     </div>
-    <h2>Message Box</h2>
-    <textarea data-emoji="true" class="form-control"></textarea>
+    <form method="post">
+      <textarea id="message">Write your message here</textarea>
+    </form>
   
   </main>
   

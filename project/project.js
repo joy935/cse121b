@@ -16,18 +16,25 @@ const displayEmoji = (emojis) => {
 
 /* async getFruits Funtion using fetch() */
 const getEmoji = async () => {
-    const response = await fetch("https://emojihub.yurace.pro/api/all");
-    emojiList = await response.json();
-    displayEmoji(emojiList);
+    try {
+        const response = await fetch("https://emojihub.yurace.pro/api/all");
+        emojiList = await response.json();
+        displayEmoji(emojiList);
+    } catch (err) {
+        console.log("Error fetching emoji data: ", err);
+    }
 };
 
-/* reset Function */
-// const reset = () => {
-//     emojiSearch.innerHTML = ""};
 
+/* Even Listener*/
+document.querySelector("#searchButton").addEventListener("click", () => {
+    const searchData = document.querySelector("#search").value;
+    const searchResult = emojiList.filter((emoji) => {
+        return emoji.name.includes(searchData);
+    });
 
-/* */
-// document.querySelector("#emojiSearch").addEventListener("change", () => {
-//     emojiSearch(emojiList)
-// });
-getEmoji();
+/* reset function */
+const reset = () => {
+    emojiElement.innerHTML = ""};
+    
+displayEmoji(searchResult);
