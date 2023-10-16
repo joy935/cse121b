@@ -6,10 +6,12 @@ let emojiList = [];
 
 /* async displayFruits Function */
 const displayEmoji = (emojis) => {
+    reset();
     emojis.forEach((emoji) => {
         let li = document.createElement("li");
         li.setAttribute("emojiName", emoji.name);
         li.innerHTML = emoji.htmlCode;
+        li.setAttribute("category", emoji.category);
         emojiElement.appendChild(li);
     })
 };
@@ -25,16 +27,20 @@ const getEmoji = async () => {
     }
 };
 
+/* reset function */
+const reset = () => {emojiElement.innerHTML = ""};
 
 /* Even Listener*/
 document.querySelector("#searchButton").addEventListener("click", () => {
+    reset();
     const searchData = document.querySelector("#search").value;
     const searchResult = emojiList.filter((emoji) => {
-        return emoji.name.includes(searchData);
+        return emoji.category.toLowerCase().includes(searchData.toLowerCase());
     });
+    displayEmoji(searchResult);
+});
 
-/* reset function */
-const reset = () => {
-    emojiElement.innerHTML = ""};
-    
-displayEmoji(searchResult);
+/* Fetch emoji data when the page loads */
+window.addEventListener("load", () => {
+    getEmoji();
+});
