@@ -21,12 +21,12 @@ const getEmoji = async () => {
 };
 
 /* reset Function */
-const reset = () => {
-    emojiSearch.innerHTML = ""};
+// const reset = () => {
+//     emojiSearch.innerHTML = ""};
 
 
 /* */
-document.querySelector("#emojiSearch").addEventListener("change", () => {
-    emojiSearch(emojiList)
-});
+// document.querySelector("#emojiSearch").addEventListener("change", () => {
+//     emojiSearch(emojiList)
+// });
 console.log(emojiList);
