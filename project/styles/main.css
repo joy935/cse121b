@@ -1,0 +1,47 @@
+* {
+    margin: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", Helvetica, sans-serif;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 1rem 0 .5rem;
+}
+
+h1 {
+    border-box: 1px solid #ccc;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: navy;
+    text-align: center;
+    margin-top: 25px;
+}
+
+input {
+    padding: .35rem;
+}
+input[type="button"] {
+    padding: .5rem;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%
+}
+
+input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+}
+
+.emojiData {
+    display: grid;
+}
