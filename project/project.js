@@ -1,6 +1,7 @@
 /* W07: Project */
 
 /* Declare and initialize global variables */
+const emojiSearch = document.querySelector("#emojiSearch");
 let emojiList = [];
 
 /* async displayFruits Function */
@@ -18,6 +19,11 @@ const getEmoji = async () => {
     displayEmoji(emojiList);
     console.log(emojiList);
 };
+
+/* reset Function */
+const reset = () => {
+    emojiSearch.innerHTML = ""};
+
 
 /* */
 emojiSearch.addEventListener("keyup", (e) => {
