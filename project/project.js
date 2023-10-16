@@ -12,12 +12,12 @@ const displayEmoji = (emojis) => {
         li.innerHTML = emoji.htmlCode;
         emojiList.appendChild(li);
     })};
+
 /* async getFruits Funtion using fetch() */
 const getEmoji = async () => {
     const response = await fetch("https://emojihub.yurace.pro/api/all");
     emojiList = await response.json();
     displayEmoji(emojiList);
-    console.log(emojiList);
 };
 
 /* reset Function */
@@ -26,14 +26,7 @@ const reset = () => {
 
 
 /* */
-emojiSearch.addEventListener("keyup", (e) => {
-    let value = e.target.value.toLowerCase();
-    let emojis = document.querySelectorAll("emojiList li");
-    emojis.forEach((emoji) => {
-        if (emoji.getAttribute("emojiName").toLowerCase().includes(value)) {
-            emoji.style.display = "block";
-        } else {
-            emoji.style.display = "none";
-        }
-    });
+document.querySelector("#emojiSearch").addEventListener("change", () => {
+    emojiSearch(emojiList)
 });
+console.log(emojiList);
