@@ -1,14 +1,7 @@
 /* W07: Project */
 
 /* Declare and initialize global variables */
-const emojiSelectorIcon = document.querySelector("#emojiSelector");
-const emojiSelector = document.querySelector("#emojiSelector");
-const emojiList = document.querySelector("#emojiList");
-const emojiSearch = document.querySelector("#emojiSearch");
-
-emojiSelectorIcon.addEventListener("click", () => {
-    emojiSelector.classList.toggle("active");
-});
+let emojiList = [];
 
 /* async displayFruits Function */
 const displayEmoji = (emojis) => {
