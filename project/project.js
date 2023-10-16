@@ -1,7 +1,7 @@
 /* W07: Project */
 
 /* Declare and initialize global variables */
-const emojiSearch = document.querySelector("#emojiSearch");
+const emojiElement = document.querySelector("#emojiList");
 let emojiList = [];
 
 /* async displayFruits Function */
@@ -10,8 +10,9 @@ const displayEmoji = (emojis) => {
         let li = document.createElement("li");
         li.setAttribute("emojiName", emoji.name);
         li.innerHTML = emoji.htmlCode;
-        emojiList.appendChild(li);
-    })};
+        emojiElement.appendChild(li);
+    })
+};
 
 /* async getFruits Funtion using fetch() */
 const getEmoji = async () => {
@@ -29,4 +30,4 @@ const getEmoji = async () => {
 // document.querySelector("#emojiSearch").addEventListener("change", () => {
 //     emojiSearch(emojiList)
 // });
-console.log(emojiList);
+getEmoji();
