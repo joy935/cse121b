@@ -10,11 +10,11 @@ const displayEmoji = (emojis) => {
     emojis.forEach((emoji) => {
         let li = document.createElement("li");
         li.setAttribute("emojiName", emoji.name);
-        // Extract the hexadecimal part and convert it to decimal
-        // const unicodePoint = parseInt((emoji.unicode).slice(2), 16);
-        // li.innerHTML = String.fromCodePoint(unicodePoint);
-        li.innerHTML = emoji.htmlCode;
         li.setAttribute("category", emoji.category);
+        const htmlCode = String(emoji.htmlCode).trim();
+        const span = document.createElement("span");
+        span.innerHTML = htmlCode;
+        li.appendChild(span);
         emojiElement.appendChild(li);
     })
 };
