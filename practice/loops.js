@@ -55,6 +55,25 @@ myInfo = {
     });
     }
 
+  // create a function that will take a food string and return that string embedded in some html
+  const foodsElement3 = document.querySelector("#favorite-foods");  
+  function GetFavoriteFoods3(food) {
+    return `<li>${food}</li>`;
+  }
+  // create a function that will take a place string and return that string embedded in some html
+    const placesElement = document.querySelector("#places-lived");
+    function GetPlacesLived(placesLived) {
+        return `<dt>${placesLived.place}</dt><dd>${placesLived.length}</dd>`;
+    }
+  // create a function that will take a list, and a callback function to produce an HTML template
+    function GenerateList(placesLived, callback) {
+        const htmlList = placesLived.map(callback).join("");
+        return htmlList;
+    }
+  // call the function for the placesLived list and for the favoriteFoods list. Set the innerHTML of the appropriate HTML element to the results of the function call.
+  foodsElement3.innerHTML = GenerateList(myInfo.favoriteFoods, GetFavoriteFoods3);
+  placesElement.innerHTML = GenerateList(myInfo.placesLived, GetPlacesLived);
+
   // Step 5: Append the <li> elements created above as children of the HTML <ul> element with an ID of favorite-foods
   document.querySelector("#favorite-foods").appendChild(favoriteFood1);
   document.querySelector("#favorite-foods").appendChild(favoriteFood2);
