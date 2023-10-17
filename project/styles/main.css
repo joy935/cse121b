@@ -4,8 +4,13 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Noto Color Emoji';
+    src: url(https://fonts.googleapis.com/css2?family=Noto+Colr+Emoji+Glyf);
+  }
+
 body {
-    font-family: "Roboto", Helvetica, sans-serif;
+    font-family: "Noto Color Emoji", Roboto, Helvetica, sans-serif;
 }
 
 h1, h2 {
@@ -42,7 +47,7 @@ input[type="checkbox"] {
     height: 25px;
 }
 
-input, button {
+input, button, textarea {
     margin: 0 auto;
     display: block;
 }
