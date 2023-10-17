@@ -19,6 +19,7 @@ myInfo = {
       },
     ],
   };
+
   // Step 4: For each favorite food in the favoriteFoods property, create an HTML <li> element and place its value in the <li> element
   let favoriteFood1 = document.createElement("li");
   favoriteFood1.textContent = myInfo.favoriteFoods[0];
@@ -31,7 +32,29 @@ myInfo = {
   
   let favoriteFood4 = document.createElement("li");
   favoriteFood4.textContent = myInfo.favoriteFoods[3];
-  
+
+  // using forEach
+  const foodsElement = document.querySelector("#favorite-foods");
+  function GetFavoriteFoods1() {
+    myInfo.favoriteFoods.forEach((food) => {
+        let li = document.createElement("li");
+        li.textContent = food;
+        foodsElement.appendChild(li);
+    });
+    }
+
+  // using map
+  const foodsElement2 = document.querySelector("#favorite-foods");
+  function GetFavoriteFoods2() {
+    myInfo.favoriteFoods.map((food) => {
+        let li = document.createElement("li");
+        li.textContent = food;
+        foodsElement2.appendChild(li);
+        return li;
+        
+    });
+    }
+
   // Step 5: Append the <li> elements created above as children of the HTML <ul> element with an ID of favorite-foods
   document.querySelector("#favorite-foods").appendChild(favoriteFood1);
   document.querySelector("#favorite-foods").appendChild(favoriteFood2);
