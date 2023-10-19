@@ -29,7 +29,50 @@ const getEmoji = async () => {
 /* reset function */
 const reset = () => {emojiElement.innerHTML = ""};
 
-/* Event Listener*/
+/* Sort by function */
+const sortBy = (emojis) => {
+    reset();
+    let filter = document.getElementById("sortBy").value;
+    switch (filter) {
+        case "smileys":
+            const smileys = emojiList.filter((emojis) => emojis.group.includes("Smileys & Emotion"));
+            displayEmoji(smileys);
+            break;
+        case "people":
+            const people = emojiList.filter((emojis) => emojis.group.includes("People & Body"));
+            displayEmoji(people);
+            break;
+        case "animals":
+            const animals = emojiList.filter((emojis) => emojis.group.includes("Animals & Nature"));
+            displayEmoji(animals);
+            break;
+        case "food":
+            const food = emojiList.filter((emojis) => emojis.group.includes("Food & Drink"));
+            displayEmoji(food);
+            break;
+        case "travel":
+            const travel = emojiList.filter((emojis) => emojis.group.includes("Travel & Places"));
+            displayEmoji(travel);
+            break;
+        case "activities":
+            const activities = emojiList.filter((emojis) => emojis.group.includes("Activities"));
+            displayEmoji(activities);
+        case "objects":
+            const objects = emojiList.filter((emojis) => emojis.group.includes("Objects"));
+            displayEmoji(objects);
+            break;
+        case "symbols":
+            const symbols = emojiList.filter((emojis) => emojis.group.includes("Symbols"));
+            displayEmoji(symbols);
+            break;
+        case "flags":
+            const flags = emojiList.filter((emojis) => emojis.group.includes("Flags"));
+            displayEmoji(flags);
+            break;
+        default:
+            console.log("Choose a filter");
+
+/* Event Listener Using Search Button */
 document.querySelector("#searchButton").addEventListener("click", () => {
     reset();
     const searchData = document.querySelector("#search").value;
@@ -39,7 +82,11 @@ document.querySelector("#searchButton").addEventListener("click", () => {
     displayEmoji(searchResult);
 });
 
+/* Event Listener Using Sort By Dropdown */
+document.querySelector("#sortBy").addEventListener("change", () => {sortBy(emojiList)});
+
 /* Fetch emoji data when the page loads */
 window.addEventListener("load", () => {
     getEmoji();
+    console.log(emojiList);
 });

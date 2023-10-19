@@ -15,14 +15,30 @@
 
 <body>
   <main id="main-selector">
+
     <h1>Emoji Selector</h1>
     <h2>Presentation...</h2>
 
     <input type="text" id="search" placeholder="Search for an emoji...">
     <button id="searchButton"><img src="images/search.png" alt="search-png">Search</button>
+    
+    <select id="sortBy" title="Choose a category.">
+      <option value="" disabled selected>Filter Emojis</option>
+      <option value="smileys">Smileys & Emotion</option>
+      <option value="people">People & Body</option>
+      <option value="animals-nature">Animals & Nature</option>
+      <option value="food-drink">Food & Drink</option>
+      <option value="travel-places">Travel & Places</option>
+      <option value="activities">Activities</option>
+      <option value="objects">Objects</option>
+      <option value="symbols">Symbols</option>
+      <option value="flags">Flags</option>
+    </select>
+
     <form method="post">
       <textarea id="message">Write your message here</textarea>
     </form>
+
     <div id="emojiData">
       <ul id="emojiList"></ul>
     </div>
