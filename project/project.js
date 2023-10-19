@@ -46,11 +46,11 @@ const sortBy = (emojis) => {
             const animals = emojiList.filter((emojis) => emojis.group.includes("Animals & Nature"));
             displayEmoji(animals);
             break;
-        case "food":
+        case "food-drink":
             const food = emojiList.filter((emojis) => emojis.group.includes("Food & Drink"));
             displayEmoji(food);
             break;
-        case "travel":
+        case "travel-places":
             const travel = emojiList.filter((emojis) => emojis.group.includes("Travel & Places"));
             displayEmoji(travel);
             break;
@@ -71,6 +71,8 @@ const sortBy = (emojis) => {
             break;
         default:
             console.log("Choose a filter");
+    };
+};
 
 /* Event Listener Using Search Button */
 document.querySelector("#searchButton").addEventListener("click", () => {
