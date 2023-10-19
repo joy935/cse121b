@@ -22,7 +22,7 @@ const displayEmoji = (emojis) => {
 /* async getFruits Funtion using fetch() */
 const getEmoji = async () => {
     try {
-        const response = await fetch("https://emojihub.yurace.pro/api/all");
+        const response = await fetch("https://emoji-api.com/emojis?access_key=123412341234");
         emojiList = await response.json();
         displayEmoji(emojiList);
     } catch (error) {
