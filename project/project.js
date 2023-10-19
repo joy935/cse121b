@@ -11,7 +11,6 @@ const displayEmoji = (emojis) => {
         let li = document.createElement("li");
         li.setAttribute("emojiName", emoji.slug);
         li.textContent = emoji.character;
-        li.appendChild(span);
         emojiElement.appendChild(li);
     })
 };
