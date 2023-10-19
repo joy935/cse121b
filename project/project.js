@@ -29,12 +29,12 @@ const getEmoji = async () => {
 /* reset function */
 const reset = () => {emojiElement.innerHTML = ""};
 
-/* Even Listener*/
+/* Event Listener*/
 document.querySelector("#searchButton").addEventListener("click", () => {
     reset();
     const searchData = document.querySelector("#search").value;
     const searchResult = emojiList.filter((emoji) => {
-        return emoji.category.toLowerCase().includes(searchData.toLowerCase());
+        return emoji.slug.toLowerCase().includes(searchData.toLowerCase());
     });
     displayEmoji(searchResult);
 });
