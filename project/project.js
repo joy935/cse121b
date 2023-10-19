@@ -35,38 +35,38 @@ const sortBy = (emojis) => {
     let filter = document.getElementById("sortBy").value;
     switch (filter) {
         case "smileys":
-            const smileys = emojiList.filter((emojis) => emojis.group.includes("Smileys & Emotion"));
+            const smileys = emojiList.filter((emojis) => emojis.group.includes("smileys-emotion"));
             displayEmoji(smileys);
             break;
         case "people":
-            const people = emojiList.filter((emojis) => emojis.group.includes("People & Body"));
+            const people = emojiList.filter((emojis) => emojis.group.includes("people-body"));
             displayEmoji(people);
             break;
-        case "animals":
-            const animals = emojiList.filter((emojis) => emojis.group.includes("Animals & Nature"));
+        case "animals-nature":
+            const animals = emojiList.filter((emojis) => emojis.group.includes("animals-nature"));
             displayEmoji(animals);
             break;
         case "food-drink":
-            const food = emojiList.filter((emojis) => emojis.group.includes("Food & Drink"));
+            const food = emojiList.filter((emojis) => emojis.group.includes("food-drink"));
             displayEmoji(food);
             break;
         case "travel-places":
-            const travel = emojiList.filter((emojis) => emojis.group.includes("Travel & Places"));
+            const travel = emojiList.filter((emojis) => emojis.group.includes("travel-places"));
             displayEmoji(travel);
             break;
         case "activities":
-            const activities = emojiList.filter((emojis) => emojis.group.includes("Activities"));
+            const activities = emojiList.filter((emojis) => emojis.group.includes("activities"));
             displayEmoji(activities);
         case "objects":
-            const objects = emojiList.filter((emojis) => emojis.group.includes("Objects"));
+            const objects = emojiList.filter((emojis) => emojis.group.includes("objects"));
             displayEmoji(objects);
             break;
         case "symbols":
-            const symbols = emojiList.filter((emojis) => emojis.group.includes("Symbols"));
+            const symbols = emojiList.filter((emojis) => emojis.group.includes("symbols"));
             displayEmoji(symbols);
             break;
         case "flags":
-            const flags = emojiList.filter((emojis) => emojis.group.includes("Flags"));
+            const flags = emojiList.filter((emojis) => emojis.group.includes("flags"));
             displayEmoji(flags);
             break;
         default:
