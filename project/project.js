@@ -9,11 +9,8 @@ const displayEmoji = (emojis) => {
     reset();
     emojis.forEach((emoji) => {
         let li = document.createElement("li");
-        li.setAttribute("emojiName", emoji.name);
-        li.setAttribute("category", emoji.category);
-        const htmlCode = String(emoji.htmlCode).trim();
-        const span = document.createElement("span");
-        span.innerHTML = htmlCode;
+        li.setAttribute("emojiName", emoji.slug);
+        li.textContent = emoji.character;
         li.appendChild(span);
         emojiElement.appendChild(li);
     })
