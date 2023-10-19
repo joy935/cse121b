@@ -19,7 +19,7 @@ const displayEmoji = (emojis) => {
 /* async getFruits Funtion using fetch() */
 const getEmoji = async () => {
     try {
-        const response = await fetch("https://emoji-api.com/emojis?access_key=123412341234");
+        const response = await fetch("https://emoji-api.com/emojis?access_key=eb980a23b69818dff7cbcf593ecf043af6dc1358");
         emojiList = await response.json();
         displayEmoji(emojiList);
     } catch (error) {
