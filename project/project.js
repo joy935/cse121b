@@ -4,6 +4,9 @@
 const emojiElement = document.querySelector("#emojiList");
 let emojiList = [];
 
+/* reset function */
+const reset = () => {emojiElement.innerHTML = ""};
+
 /* async displayFruits Function */
 const displayEmoji = (emojis) => {
     reset();
@@ -25,9 +28,6 @@ const getEmoji = async () => {
         console.log("Error fetching emoji data: ", error);
     }
 };
-
-/* reset function */
-const reset = () => {emojiElement.innerHTML = ""};
 
 /* Sort by function */
 const sortBy = (emojis) => {
@@ -74,6 +74,7 @@ const sortBy = (emojis) => {
     };
 };
 
+
 /* Event Listener Using Search Button */
 document.querySelector("#searchButton").addEventListener("click", () => {
     reset();
@@ -85,7 +86,10 @@ document.querySelector("#searchButton").addEventListener("click", () => {
 });
 
 /* Event Listener Using Sort By Dropdown */
-document.querySelector("#sortBy").addEventListener("change", () => {sortBy(emojiList)});
+document.getElementById("sortBy").addEventListener("change", function () {
+    const selectedGroup = this.value;
+    sortBy(emojiList, selectedGroup);
+  });
 
 /* Fetch emoji data when the page loads */
 window.addEventListener("load", () => {
