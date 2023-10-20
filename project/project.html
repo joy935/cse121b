@@ -19,10 +19,14 @@
     <h1>Emoji Selector</h1>
     <h2>Presentation...</h2>
 
-    <h3>Search by Keyword</h3>
-    <input type="text" id="search" placeholder="Search for an emoji...">
-    <button id="searchButton"><img src="images/search.png" alt="search-png">Search</button>
-    
+    <div id="search-box">
+      <h3>Search by Keyword</h3>
+      <div id="search-input">
+        <input type="text" id="search" placeholder="Search for an emoji...">
+        <button id="searchButton">Search</button>
+      </div>
+    </div>
+
     <h3>Search by Category</h3>
     <select id="sortBy" title="Choose a category.">
       <option value="" disabled selected>Filter Emojis</option>
@@ -37,8 +41,9 @@
       <option value="flags">Flags</option>
     </select>
 
+    <h3>Write your message here</h3>
     <form method="post">
-      <textarea id="message">Write your message here</textarea>
+      <textarea id="message"></textarea>
     </form>
 
     <div id="emojiData">

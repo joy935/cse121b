@@ -42,9 +42,26 @@ input[type="checkbox"] {
     height: 25px;
 }
 
-input, button, textarea, select {
+textarea, select {
     margin: 0 auto;
     display: block;
+}
+
+#search-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+  
+#search-input {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+  
+#searchButton {
+    margin-left: 10px;
 }
 
 .emojiData {
@@ -60,11 +77,6 @@ ul {
 li {
     display: inline-block;
     vertical-align: top;
-}
-
-button img {
-    width: 50px;
-    height: 50px;
 }
 
 footer {
