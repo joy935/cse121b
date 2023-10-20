@@ -77,19 +77,21 @@ const sortBy = (emojis) => {
 
 /* Event Listener Using Search Button */
 document.querySelector("#searchButton").addEventListener("click", () => {
-    reset();
     const searchData = document.querySelector("#search").value;
     const searchResult = emojiList.filter((emoji) => {
         return emoji.slug.toLowerCase().includes(searchData.toLowerCase());
     });
     displayEmoji(searchResult);
 });
-
 /* Event Listener Using Sort By Dropdown */
 document.getElementById("sortBy").addEventListener("change", function () {
     const selectedGroup = this.value;
     sortBy(emojiList, selectedGroup);
-  });
+});
+
+getEmoji().then(() => {
+    console.log(emojiList);
+});
 
 /* Fetch emoji data when the page loads */
 window.addEventListener("load", () => {
