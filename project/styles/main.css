@@ -79,6 +79,10 @@ li {
     vertical-align: top;
 }
 
+#message {
+    font-size: 3rem;
+}
+
 footer {
     background-color: #444;
     color: white;

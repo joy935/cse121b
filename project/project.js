@@ -1,5 +1,7 @@
 /* W07: Project */
 
+import emojiSelect from "./emojiSelect.js";
+
 /* Declare and initialize global variables */
 const emojiElement = document.querySelector("#emojiList");
 let emojiList = [];
@@ -29,7 +31,7 @@ const getEmoji = async () => {
     }
 };
 
-/* Sort by function */
+/* sort by function */
 const sortBy = (emojis) => {
     reset();
     let filter = document.getElementById("sortBy").value;
@@ -73,6 +75,9 @@ const sortBy = (emojis) => {
             console.log("Choose a filter");
     };
 };
+
+/* Event Listener Using Emoji List */
+emojiElement.addEventListener("click", emojiSelect);
 
 
 /* Event Listener Using Search Button */
