@@ -10,24 +10,22 @@
 </head>
 
 <nav>
-
 </nav>
 
 <body>
   <main id="main-selector">
 
     <h1>Emoji Selector</h1>
-    <h2>Presentation...</h2>
 
     <div id="search-box">
-      <h3>Search by Keyword</h3>
+      <h2>Search by Keyword</h2>
       <div id="search-input">
         <input type="text" id="search" placeholder="Search for an emoji...">
         <button id="searchButton">Search</button>
       </div>
     </div>
 
-    <h3>Search by Category</h3>
+    <h2>Search by Category</h2>
     <select id="sortBy" title="Choose a category.">
       <option value="" disabled selected>Filter Emojis</option>
       <option value="smileys">Smileys & Emotion</option>
@@ -41,9 +39,10 @@
       <option value="flags">Flags</option>
     </select>
 
-    <h3>Select your emojis</h3>
+    <h2>Select your emojis</h2>
     <form method="post">
       <textarea id="message"></textarea>
+      <button id="selectButton">Select</button>
     </form>
 
     <div id="emojiData">

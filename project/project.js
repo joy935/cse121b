@@ -1,15 +1,15 @@
-/* W07: Project */
+/* W07: Project - Emoji Selector */
 
 import emojiSelect from "./emojiSelect.js";
 
-/* Declare and initialize global variables */
+/* Declare and Initialize Global Variables */
 const emojiElement = document.querySelector("#emojiList");
 let emojiList = [];
 
-/* reset function */
+/* Reset Function */
 const reset = () => {emojiElement.innerHTML = ""};
 
-/* async displayFruits Function */
+/* Async displayFruits Function */
 const displayEmoji = (emojis) => {
     reset();
     emojis.forEach((emoji) => {
@@ -20,7 +20,7 @@ const displayEmoji = (emojis) => {
     })
 };
 
-/* async getFruits Funtion using fetch() */
+/* Async getFruits Funtion Using fetch() */
 const getEmoji = async () => {
     try {
         const response = await fetch("https://emoji-api.com/emojis?access_key=eb980a23b69818dff7cbcf593ecf043af6dc1358");
@@ -31,7 +31,7 @@ const getEmoji = async () => {
     }
 };
 
-/* sort by function */
+/* Sort by Function */
 const sortBy = (emojis) => {
     reset();
     let filter = document.getElementById("sortBy").value;
@@ -79,7 +79,6 @@ const sortBy = (emojis) => {
 /* Event Listener Using Emoji List */
 emojiElement.addEventListener("click", emojiSelect);
 
-
 /* Event Listener Using Search Button */
 document.querySelector("#searchButton").addEventListener("click", () => {
     const searchData = document.querySelector("#search").value;
@@ -93,10 +92,20 @@ document.getElementById("sortBy").addEventListener("change", function () {
     const selectedGroup = this.value;
     sortBy(emojiList, selectedGroup);
 });
-
 getEmoji().then(() => {
     console.log(emojiList);
 });
+
+/* Event Listener Using Select Button */
+document.getElementById("selectButton").onclick = function(){
+    emojiSelect();
+    var text = document.querySelector("#message");
+    text.select();
+    navigator.clipboard.writeText(text.value);
+    alert(`Copied the text: ${text.value}`);
+};
+
+
 
 /* Fetch emoji data when the page loads */
 window.addEventListener("load", () => {
