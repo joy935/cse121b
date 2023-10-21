@@ -64,6 +64,17 @@ textarea, select {
     margin-left: 10px;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#selectButton {
+    margin-left: 10px;
+}
+
 .emojiData {
     display: grid;
 }

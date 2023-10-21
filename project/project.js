@@ -107,8 +107,6 @@ document.getElementById("selectButton").onclick = function(){
     alert(`Copied the text: ${text.value}`);
 };
 
-
-
 /* Fetch emoji data when the page loads */
 window.addEventListener("load", () => {
     getEmoji();
