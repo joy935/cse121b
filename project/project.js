@@ -71,6 +71,8 @@ const sortBy = (emojis) => {
             const flags = emojiList.filter((emojis) => emojis.group.includes("flags"));
             displayEmoji(flags);
             break;
+        case "nofilter":
+            displayEmoji(emojiList);
         default:
             console.log("Choose a filter");
     };
