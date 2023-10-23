@@ -113,7 +113,7 @@ function myFunction() {
     navigator.clipboard.writeText(copyText.value);
     alert(`Copied the text: ${copyText.value}`);
 }
-document.getElementById("selectButton").addEventListener("click", myFunction);
+myFunction();
 
 /* Fetch emoji data when the page loads */
 window.addEventListener("load", () => {
