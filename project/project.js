@@ -99,21 +99,14 @@ getEmoji().then(() => {
 });
 
 /* Event Listener Using Select Button */
-// document.getElementById("selectButton").onclick = function(){
-//     var copyText = document.getElementById("message");
-//     copyText.select();
-//     navigator.clipboard.writeText(copyText.value);
-//     // alert(`Copied the text: ${copyText.value}`);
-// };
-
-function myFunction() {
+function copyFunction() {
     var copyText = document.getElementById("message");
     copyText.select();
     copyText.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(copyText.value);
-    alert(`Copied the text: ${copyText.value}`);
+    alert(`Text copied: ${copyText.value}`);
 }
-myFunction();
+document.querySelector("#copyButton").addEventListener("click", copyFunction);
 
 /* Fetch emoji data when the page loads */
 window.addEventListener("load", () => {
