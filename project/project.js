@@ -1,5 +1,6 @@
 /* W07: Project - Emoji Selector */
 
+/* Import emojiSelect Function */
 import emojiSelect from "./emojiSelect.js";
 
 /* Declare and Initialize Global Variables */
@@ -78,6 +79,15 @@ const sortBy = (emojis) => {
     };
 };
 
+/* Copy Function */
+function copyFunction() {
+    var copyText = document.getElementById("message");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(copyText.value);
+    alert(`Text copied: ${copyText.value}`);
+}
+
 /* Event Listener Using Emoji List */
 emojiElement.addEventListener("click", emojiSelect);
 
@@ -99,13 +109,6 @@ getEmoji().then(() => {
 });
 
 /* Event Listener Using Select Button */
-function copyFunction() {
-    var copyText = document.getElementById("message");
-    copyText.select();
-    copyText.setSelectionRange(0, 99999);
-    navigator.clipboard.writeText(copyText.value);
-    alert(`Text copied: ${copyText.value}`);
-}
 document.querySelector("#copyButton").addEventListener("click", copyFunction);
 
 /* Fetch emoji data when the page loads */
