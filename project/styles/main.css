@@ -64,14 +64,14 @@ textarea, select {
     margin-left: 10px;
 }
 
-form {
+.button-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
-#selectButton {
+#copyButton {
     margin-left: 10px;
 }
 
