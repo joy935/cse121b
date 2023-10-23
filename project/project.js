@@ -117,6 +117,6 @@ window.addEventListener("load", () => {
     console.log(emojiList);
 });
 
-/* Async Function to Read Clipboard */
-setTimeout(async()=>console.log(
-    await window.navigator.clipboard.readText()), 3000)
+// /* Async Function to Read Clipboard */
+// setTimeout(async()=>console.log(
+//     await window.navigator.clipboard.readText()), 3000)
