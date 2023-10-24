@@ -80,12 +80,12 @@ const sortBy = (emojis) => {
 };
 
 /* Copy Function */
-function copyFunction() {
+function selectFunction() {
     var copyText = document.getElementById("message");
     copyText.select();
     copyText.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(copyText.value);
-    alert(`Text copied: ${copyText.value}`);
+    alert(`Text selected: ${copyText.value}`);
 }
 
 /* Event Listener Using Emoji List */
@@ -109,7 +109,7 @@ getEmoji().then(() => {
 });
 
 /* Event Listener Using Select Button */
-document.querySelector("#copyButton").addEventListener("click", copyFunction);
+document.querySelector("#selectButton").addEventListener("click", selectFunction);
 
 /* Fetch emoji data when the page loads */
 window.addEventListener("load", () => {
