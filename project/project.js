@@ -80,7 +80,7 @@ const sortBy = (emojis) => {
 };
 
 /* Event Listener Using Copy Button */
-const btnCopy = document.querySelector("#selectButton");
+const btnCopy = document.querySelector("#copyButton");
 const textTocopy = document.querySelector("#message");
 btnCopy.onclick = function () {
     textTocopy.select();
