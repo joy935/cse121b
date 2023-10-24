@@ -79,10 +79,13 @@ const sortBy = (emojis) => {
     };
 };
 
+/* Event Listener Using Copy Button */
 const btnCopy = document.querySelector("#selectButton");
 const textTocopy = document.querySelector("#message");
 btnCopy.onclick = function () {
-
+    textTocopy.select();
+    navigator.clipboard.writeText(textTocopy.value);
+};
 
 /* Event Listener Using Emoji List */
 emojiElement.addEventListener("click", emojiSelect);
@@ -103,8 +106,6 @@ document.getElementById("sortBy").addEventListener("change", function () {
 getEmoji().then(() => {
     console.log(emojiList);
 });
-
-
 
 /* Fetch emoji data when the page loads */
 window.addEventListener("load", () => {
