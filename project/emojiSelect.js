@@ -3,7 +3,7 @@
 function emojiSelect(event) {
     if (event.target != event.currentTarget) {
         let smiley = event.target;
-        document.querySelector("#message").value += smiley.textContent;
+        document.querySelector("#message").value += `${smiley.textContent}`;
     }
 };
 
