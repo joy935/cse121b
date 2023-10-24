@@ -79,14 +79,10 @@ const sortBy = (emojis) => {
     };
 };
 
-/* Copy Function */
-function selectFunction() {
-    var copyText = document.getElementById("message");
-    copyText.select();
-    copyText.setSelectionRange(0, 99999);
-    navigator.clipboard.writeText(copyText.value);
-    alert(`Text selected: ${copyText.value}`);
-}
+const btnCopy = document.querySelector("#selectButton");
+const textTocopy = document.querySelector("#message");
+btnCopy.onclick = function () {
+
 
 /* Event Listener Using Emoji List */
 emojiElement.addEventListener("click", emojiSelect);
@@ -108,15 +104,10 @@ getEmoji().then(() => {
     console.log(emojiList);
 });
 
-/* Event Listener Using Select Button */
-document.querySelector("#selectButton").addEventListener("click", selectFunction);
+
 
 /* Fetch emoji data when the page loads */
 window.addEventListener("load", () => {
     getEmoji();
     console.log(emojiList);
 });
-
-// /* Async Function to Read Clipboard */
-// setTimeout(async()=>console.log(
-//     await window.navigator.clipboard.readText()), 3000)
